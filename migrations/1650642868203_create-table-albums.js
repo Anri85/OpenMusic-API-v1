@@ -1,24 +1,24 @@
 exports.up = (pgm) => {
     pgm.createTable("albums", {
         id: {
-            type: "varchar(50)",
+            type: "VARCHAR(50)",
             primaryKey: true,
         },
         name: {
-            type: "varchar(50)",
+            type: "VARCHAR(50)",
             notNull: true,
         },
         year: {
-            type: "integer",
+            type: "INTEGER",
             notNull: true,
         },
         created_at: {
-            type: "timestamp",
+            type: "TIMESTAMP",
             notNull: true,
             default: pgm.func("current_timestamp"),
         },
         updated_at: {
-            type: "timestamp",
+            type: "TIMESTAMP",
             notNull: true,
             default: pgm.func("current_timestamp"),
         },
